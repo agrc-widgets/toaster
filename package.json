@@ -1,6 +1,6 @@
 {
   "name": "toaster",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Toast messages to your application.",
   "main": "dist/Toaster.js",
   "dependencies": {},
