@@ -2,6 +2,13 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
+        bump: {
+            options: {
+                files: ['package.json', 'bower.json'],
+                commitFiles: bumpFiles,
+                push: false
+            }
+        },
         copy: {
             main: {
                 expand: true,
