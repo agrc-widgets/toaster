@@ -1,0 +1,9 @@
+.toaster-item {
+  opacity: 0;
+}
+.toaster-item .alert {
+  width: 100%;
+  max-height: 8em;
+  margin: 1px;
+  overflow: auto;
+}

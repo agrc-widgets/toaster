@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toaster Tests</title>
+
+    <!-- META TAGS -->
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../dist/resources/Toaster.css">
+    <style type='text/css'>
+        body {
+            padding: 50px;
+        }
+    </style>
+
+    <!-- JAVASCRIPT -->
+    <script type='text/javascript' src='dojoConfig.js'></script>
+    <script type='text/javascript' src="../bower_components/dojo/dojo.js"></script>
+    <script type="text/javascript">
+        var widgetUnderTest;
+
+        require([
+            'toaster/Toaster',
+            'dojo/topic',
+            'dojo/on',
+
+            'dojo/domReady!'
+        ], function(Module, topic, on) {
+            widgetUnderTest = new Module.default({
+            }, 'node');
+
+            widgetUnderTest.startup();
+
+            on(document.getElementById('start'), 'click', function () {
+                console.log('starting test');
+
+                if (window.interval) {
+                    clearInterval(window.interval);
+                    window.interval = null;
+                    return;
+                }
+                window.interval = setInterval(function () {
+                    topic.publish('app/Toaster', Math.floor(Math.random() * 10).toString());
+                }, 1000);
+            });
+            on(document.getElementById('error'), 'click', function () {
+                topic.publish('app/Toaster', {
+                    message: 'There was an error!',
+                    type: 'danger'
+                });
+            });
+        });
+</script>
+</head>
+<body>
+    <div id="node"></div>
+    <button id='start'>Test</button>
+    <button id='error'>Test Error</button>
+</body>
+</html>

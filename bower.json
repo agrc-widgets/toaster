@@ -1,0 +1,25 @@
+{
+  "name": "toaster",
+  "description": "Toast messages to your application.",
+  "main": "Toaster.js",
+  "authors": [
+    "Scott Davis <stdavis@utah.gov>"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dijit": "~1.10.4",
+    "dojo": "~1.10.4",
+    "bootstrap": "~3.3.6"
+  }
+}

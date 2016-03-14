@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "moduleResolution": "classic",
+        "removeComments": false,
+        "sourceMap": true,
+        "target": "es5",
+        "outDir": "dist"
+    },
+    "compileOnSave": false,
+    "filesGlob": [
+        "src/**/*.ts",
+        "node_modules/dojo-typings/dojo/1.11/index.d.ts",
+        "node_modules/dojo-typings/dojo/1.11/modules.d.ts",
+        "node_modules/dojo-typings/dijit/1.11/index.d.ts",
+        "node_modules/dojo-typings/dijit/1.11/modules.d.ts"
+    ],
+    "files": [
+        "src/Toaster.ts",
+        "src/ToasterItem.ts",
+        "src/typings.d.ts",
+        "node_modules/dojo-typings/dojo/1.11/index.d.ts",
+        "node_modules/dojo-typings/dojo/1.11/modules.d.ts",
+        "node_modules/dojo-typings/dijit/1.11/index.d.ts",
+        "node_modules/dojo-typings/dijit/1.11/modules.d.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": true
+    }
+}
