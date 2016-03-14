@@ -2,7 +2,7 @@
   "name": "toaster",
   "version": "0.1.0",
   "description": "Toast messages to your application.",
-  "main": "Toaster.js",
+  "main": "dist/Toaster.js",
   "dependencies": {},
   "devDependencies": {
     "dojo-typings": "^1.11.0",
@@ -16,6 +16,6 @@
   "scripts": {
     "test": "grunt test"
   },
-  "author": "",
+  "author": "Steve Gourley <sgourley@utah.gov>, Scott Davis <stdavis@utah.gov>",
   "license": "MIT"
 }

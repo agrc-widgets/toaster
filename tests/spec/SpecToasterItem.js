@@ -1,5 +1,5 @@
 require([
-    'app/ToasterItem',
+    'toaster/ToasterItem',
 
     'dojo/dom-construct'
 ], function (
