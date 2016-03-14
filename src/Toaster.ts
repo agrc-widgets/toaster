@@ -9,7 +9,7 @@ import * as lang from 'dojo/_base/lang';
 import * as aspect from 'dojo/aspect';
 import * as topic from 'dojo/topic';
 
-import * as template from 'dojo/text!toaster/templates/Toaster.html';
+import * as template from 'dojo/text!./templates/Toaster.html';
 
 export default dojoDeclare([_WidgetBase, _TemplatedMixin], {
     // description:

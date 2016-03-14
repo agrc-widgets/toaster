@@ -1,7 +1,7 @@
 import * as _TemplatedMixin from 'dijit/_TemplatedMixin'
 import * as _WidgetBase from 'dijit/_WidgetBase';
 
-import * as template from 'dojo/text!toaster/templates/ToasterItem.html';
+import * as template from 'dojo/text!./templates/ToasterItem.html';
 
 import * as dojoDeclare from 'dojo/_base/declare';
 import * as baseFx from 'dojo/_base/fx';

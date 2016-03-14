@@ -1,8 +1,8 @@
-declare module 'dojo/text!toaster/templates/ToasterItem.html' {
+declare module 'dojo/text!./templates/ToasterItem.html' {
     const ToasterItem: string;
     export = ToasterItem;
 }
-declare module 'dojo/text!toaster/templates/Toaster.html' {
+declare module 'dojo/text!./templates/Toaster.html' {
     const Toaster:string;
     export = Toaster
 }

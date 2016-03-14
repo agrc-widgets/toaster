@@ -1,4 +1,4 @@
-define(["require", "exports", 'dijit/_TemplatedMixin', 'dijit/_WidgetBase', 'dojo/text!toaster/templates/ToasterItem.html', 'dojo/_base/declare', 'dojo/_base/fx', 'dojo/_base/lang'], function (require, exports, _TemplatedMixin, _WidgetBase, template, dojoDeclare, baseFx, lang) {
+define(["require", "exports", 'dijit/_TemplatedMixin', 'dijit/_WidgetBase', 'dojo/text!./templates/ToasterItem.html', 'dojo/_base/declare', 'dojo/_base/fx', 'dojo/_base/lang'], function (require, exports, _TemplatedMixin, _WidgetBase, template, dojoDeclare, baseFx, lang) {
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = dojoDeclare([_WidgetBase, _TemplatedMixin], {
         // description:

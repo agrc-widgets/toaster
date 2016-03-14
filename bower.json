@@ -1,25 +1,25 @@
 {
-  "name": "toaster",
-  "description": "Toast messages to your application.",
-  "main": "Toaster.js",
-  "authors": [
-    "Scott Davis <stdavis@utah.gov>"
-  ],
-  "license": "MIT",
-  "moduleType": [
-    "amd"
-  ],
-  "homepage": "",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "dijit": "~1.10.4",
-    "dojo": "~1.10.4",
-    "bootstrap": "~3.3.6"
-  }
+    "authors": [
+        "Scott Davis <stdavis@utah.gov>"
+    ],
+    "dependencies": {
+        "bootstrap": "~3.3.6",
+        "dijit": "~1.10.4",
+        "dojo": "~1.10.4"
+    },
+    "description": "Toast messages to your application.",
+    "homepage": "https://github.com/agrc-widgets/toaster",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "tests",
+        "package.json"
+    ],
+    "license": "MIT",
+    "main": "dist/Toaster.js",
+    "moduleType": [
+        "amd"
+    ],
+    "name": "toaster"
 }
