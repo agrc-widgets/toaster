@@ -68,11 +68,11 @@ export default dojoDeclare([_WidgetBase, _TemplatedMixin], {
         this.own(
             this.hideAnim = baseFx.fadeOut({
                 node: this.domNode,
-                duration: 1000
+                duration: 1000,
+                end: () => { this.destroyRecursive(false); }
             }),
             this.showAnim = baseFx.fadeIn({node: this.domNode})
         );
-        this.hideAnim.on('end', lang.partial(lang.hitch(this, this.destroyRecursive), false));
 
         this.inherited(arguments);
     },

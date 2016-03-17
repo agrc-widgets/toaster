@@ -1,4 +1,4 @@
-define(["require", "exports", 'dijit/_TemplatedMixin', 'dijit/_WidgetBase', 'dojo/text!./templates/ToasterItem.html', 'dojo/_base/declare', 'dojo/_base/fx', 'dojo/_base/lang'], function (require, exports, _TemplatedMixin, _WidgetBase, template, dojoDeclare, baseFx, lang) {
+define(["require", "exports", 'dijit/_TemplatedMixin', 'dijit/_WidgetBase', 'dojo/text!./templates/ToasterItem.html', 'dojo/_base/declare', 'dojo/_base/fx'], function (require, exports, _TemplatedMixin, _WidgetBase, template, dojoDeclare, baseFx) {
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = dojoDeclare([_WidgetBase, _TemplatedMixin], {
         // description:
@@ -37,14 +37,15 @@ define(["require", "exports", 'dijit/_TemplatedMixin', 'dijit/_WidgetBase', 'doj
             }
         },
         postCreate: function () {
+            var _this = this;
             // summary:
             //      Overrides method of same name in dijit._Widget.
             console.log('app.ToasterItem::postCreate', arguments);
             this.own(this.hideAnim = baseFx.fadeOut({
                 node: this.domNode,
-                duration: 1000
+                duration: 1000,
+                end: function () { _this.destroyRecursive(false); }
             }), this.showAnim = baseFx.fadeIn({ node: this.domNode }));
-            this.hideAnim.on('end', lang.partial(lang.hitch(this, this.destroyRecursive), false));
             this.inherited(arguments);
         },
         show: function () {

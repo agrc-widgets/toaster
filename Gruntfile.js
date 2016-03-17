@@ -1,10 +1,12 @@
 module.exports = function (grunt) {
+    var bumpFiles = ['package.json', 'bower.json'];
+
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
         bump: {
             options: {
-                files: ['package.json', 'bower.json'],
+                files: bumpFiles,
                 commitFiles: bumpFiles,
                 push: false
             }

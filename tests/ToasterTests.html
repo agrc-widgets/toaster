@@ -27,8 +27,8 @@
             'dojo/on',
 
             'dojo/domReady!'
-        ], function(Module, topic, on) {
-            widgetUnderTest = new Module.default({
+        ], function (Toaster, topic, on) {
+            widgetUnderTest = new Toaster.default({
             }, 'node');
 
             widgetUnderTest.startup();
@@ -51,6 +51,9 @@
                     type: 'danger'
                 });
             });
+            on(document.getElementById('manual'), 'click', function () {
+                topic.publish('app/Toaster', 'manual message');
+            });
         });
 </script>
 </head>
@@ -58,5 +61,6 @@
     <div id="node"></div>
     <button id='start'>Test</button>
     <button id='error'>Test Error</button>
+    <button id='manual'>Manual</button>
 </body>
 </html>
