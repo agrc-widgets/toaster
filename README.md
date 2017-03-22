@@ -2,7 +2,13 @@
 
 Easily toast messages to your app using a dynamically placed bootstrap alert.
 
-Example
+### Install
+
+```shell
+bower install agrc-toaster --save
+```
+
+### Usage
 ```javascript
 var toaster = new Toaster({
     topic: 'toast-topic'
