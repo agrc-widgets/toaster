@@ -1,3 +1,5 @@
+# NOTE: This repo has been replaced by https://github.com/agrc/kitchen-sink
+
 # Toaster
 
 Easily toast messages to your app using a dynamically placed bootstrap alert.
